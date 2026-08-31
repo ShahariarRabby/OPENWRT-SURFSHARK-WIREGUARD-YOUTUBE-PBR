@@ -235,10 +235,10 @@ uci set pbr.youtube_surfshark.proto='all'
 uci set pbr.youtube_surfshark.src_addr="$LAN_SUBNET"
 uci set pbr.youtube_surfshark.enabled='1'
 
-# YouTube and selected supporting Google endpoints.
-# Generic roots such as google.com are intentionally excluded so normal Google
-# browsing is less likely to be routed through the VPN.
-uci set pbr.youtube_surfshark.dest_addr='youtube.com youtu.be yt.be youtube-nocookie.com youtubekids.com googlevideo.com ytimg.com youtubei.googleapis.com youtube.googleapis.com youtubeembeddedplayer.googleapis.com youtube-ui.l.google.com youtube.l.google.com ytimg.l.google.com wide-youtube.l.google.com yt3.ggpht.com yt3.googleusercontent.com accounts.google.com www.gstatic.com ssl.gstatic.com fonts.gstatic.com lh3.googleusercontent.com lh5.googleusercontent.com lh6.googleusercontent.com ifconfig.me'
+# YouTube and selected supporting endpoints.
+# Generic roots such as google.com are intentionally excluded so unrelated
+# Google traffic is less likely to follow this policy.
+uci set pbr.youtube_surfshark.dest_addr='youtube.com youtu.be yt.be youtube-nocookie.com youtubekids.com googlevideo.com ytimg.com youtubei.googleapis.com youtube.googleapis.com youtubeembeddedplayer.googleapis.com youtube-ui.l.google.com youtube.l.google.com ytimg.l.google.com wide-youtube.l.google.com yt3.ggpht.com yt3.googleusercontent.com accounts.google.com www.gstatic.com ssl.gstatic.com fonts.gstatic.com lh3.googleusercontent.com lh5.googleusercontent.com lh6.googleusercontent.com www.googleadservices.com googleads.g.doubleclick.net pagead2.googlesyndication.com tpc.googlesyndication.com ad.doubleclick.net ade.googlesyndication.com ifconfig.me'
 
 uci commit pbr
 
